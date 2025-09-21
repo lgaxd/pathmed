@@ -1,0 +1,1 @@
+export type Especialidade = "Psicologia" | "Fisioterapia" | "Nutrição" | "Terapia Ocupacional" | "Fonoaudiologia";
