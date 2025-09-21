@@ -22,6 +22,12 @@ const Login = lazy(() =>
    }))
 );
 
+const OnboardingConsulta = lazy(() =>
+  import("./pages/onboarding-consulta").then((module) => ({
+    default: module.OnboardingConsulta,
+  }))
+);
+
 function App() {
 
   return (
@@ -32,6 +38,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/onboarding-consulta" element={<OnboardingConsulta />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>
