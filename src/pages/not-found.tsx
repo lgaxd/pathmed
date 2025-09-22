@@ -9,14 +9,14 @@ export function NotFound() {
       <img
         src={ImageNotFound}
         alt="Image de página não encontrada"
-        className="w-3/5 justify-self-center"
+        className="w-2/5 justify-self-center"
       />
 
       <p className="text-gray-600 mb-6">Ops! Parece que você se perdeu</p>
 
       <Link
         to="/"
-        className="text-white bg-blue-600 p-2 rounded hover:underline"
+        className="text-white bg-blue-500 p-2 rounded hover:bg-blue-600"
       >
         Voltar para Home
       </Link>

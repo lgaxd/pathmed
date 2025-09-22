@@ -34,6 +34,12 @@ const TeleConsultaEncaminhamento = lazy(() =>
   }))
 );
 
+const Configuracoes = lazy(() =>
+  import("./pages/configuracoes").then((module) => ({
+    default: module.Configuracoes,
+  }))
+);
+
 function App() {
 
   return (
@@ -46,6 +52,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/onboarding-consulta" element={<OnboardingConsulta />} />
             <Route path="/teleconsulta" element={<TeleConsultaEncaminhamento />} />
+            <Route path="/configuracoes" element={<Configuracoes />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>

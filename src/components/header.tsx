@@ -1,5 +1,5 @@
 import { useState } from "react";
-import iconeUsuario from "/src/assets/imgs/utils/icone-usuario.png";
+import iconeUsuario from "../assets/imgs/utils/icone-usuario.png";
 
 interface HeaderProps {
     onMenuClick: () => void;

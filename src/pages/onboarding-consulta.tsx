@@ -9,19 +9,17 @@ import { Sidebar } from '../components/sidebar';
 import { Overlay } from '../components/overlay';
 import { Header } from '../components/header';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function OnboardingConsulta() {
+  const navigate = useNavigate();
   const totalPassos = onboardingSteps.length;
   const { passoAtual, avancarPasso, voltarPasso } = useOnboarding({ totalPassos });
-
-  const handleIniciarConsulta = () => {
-    console.log('Iniciando tele consulta...');
-    // Lógica para iniciar a consulta
-  };
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleLogout = () => {
+    navigate("/login");
     console.log("Usuário deslogado!");
   };
 

@@ -24,7 +24,7 @@ export function Home() {
       {/* Main */}
       <main className="p-6">
         <div className="text-lg mb-4">
-          Olá, <b>paciente</b>!
+          Olá, <b>Nelson</b>!
         </div>
 
         <RenderAgendamentos />
