@@ -5,8 +5,8 @@ import { ErrorBoundary } from "react-error-boundary";
 import { Loading } from "./components/loading";
 
 const Home = lazy(() =>
-  import("./pages/home").then((module) => ({ 
-    default: module.Home, 
+  import("./pages/home").then((module) => ({
+    default: module.Home,
   }))
 );
 
@@ -17,9 +17,33 @@ const NotFound = lazy(() =>
 );
 
 const Login = lazy(() =>
-  import("./pages/login").then((module) => ({ 
+  import("./pages/login").then((module) => ({
     default: module.Login,
-   }))
+  }))
+);
+
+const OnboardingConsulta = lazy(() =>
+  import("./pages/onboarding-consulta").then((module) => ({
+    default: module.OnboardingConsulta,
+  }))
+);
+
+const TeleConsultaEncaminhamento = lazy(() =>
+  import("./pages/teleconsulta").then((module) => ({
+    default: module.TeleConsultaEncaminhamento,
+  }))
+);
+
+const Configuracoes = lazy(() =>
+  import("./pages/configuracoes").then((module) => ({
+    default: module.Configuracoes,
+  }))
+);
+
+const AssistenteVirtual = lazy(() =>
+  import("./pages/assistente-virtual").then((module) => ({
+    default: module.AssistenteVirtual,
+  }))
 );
 
 function App() {
@@ -32,6 +56,10 @@ function App() {
             <Route index element={<Home />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/onboarding-consulta" element={<OnboardingConsulta />} />
+            <Route path="/teleconsulta" element={<TeleConsultaEncaminhamento />} />
+            <Route path="/configuracoes" element={<Configuracoes />} />
+            <Route path="/assistente-virtual" element={<AssistenteVirtual />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>

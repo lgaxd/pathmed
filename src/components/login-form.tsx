@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useValidarCredenciais } from "../hooks/validar-credenciais";
 
 export function LoginForm() {
     const [rghc, setRghc] = useState("");
     const [password, setPassword] = useState("");
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const [erro, setErro] = useState<string | null>(null);
     const navigate = useNavigate();
+    const { validar } = useValidarCredenciais(rghc, password, setErro, () => navigate("/"));
+    // Quando a pessoa digitar, a mensagem de erro deve sumir.
+
+    useEffect(() => {
+        if (erro) {
+            setErro(null);
+        }
+    }, [rghc, password]);
+
+    
 
     return (
         // Formulário
@@ -61,10 +73,19 @@ export function LoginForm() {
             {/* Botão entrar */}
             <button
                 className="w-full max-w-sm bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg shadow cursor-pointer"
-                onClick={() => navigate("/")}
+                onClick={validar}
             >
                 Entrar
             </button>
+
+            {/* Mensagem de erro 
+                Deverá aparecer um fundo branco com a mensagem de erro em vermelho.
+            */}
+            {erro && (
+                <div className="mt-4 bg-white p-3 rounded-lg shadow w-full max-w-sm">
+                    <p className="text-red-500 text-sm">{erro}</p>
+                </div>
+            )}
         </div>
     );
 }

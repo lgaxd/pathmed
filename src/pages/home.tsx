@@ -3,11 +3,14 @@ import { Sidebar } from "../components/sidebar";
 import { Overlay } from "../components/overlay";
 import { Header } from "../components/header";
 import { RenderAgendamentos } from "../components/render-agendamentos";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
+    navigate("/login");
     console.log("Usuário deslogado!");
   };
 
@@ -21,7 +24,7 @@ export function Home() {
       {/* Main */}
       <main className="p-6">
         <div className="text-lg mb-4">
-          Olá, <b>paciente</b>!
+          Olá, <b>Nelson</b>!
         </div>
 
         <RenderAgendamentos />

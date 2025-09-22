@@ -1,60 +1,59 @@
-import type { Agendamento } from "../types/agendamento";
 import { ListaAgendamentos } from "./lista-agendamentos";
+import type { Agendamento } from "../types/agendamento";
 
 export function RenderAgendamentos() {
   const agendamentosHoje: Agendamento[] = [
     {
       id: "1",
       rghcPaciente: "123456",
-      especialidade: "Psicologia",
-      data: "2025-05-24",
-      horario: "14:30",
+      especialidade: "Fisioterapia",
+      data: new Date().toISOString().split('T')[0], // Data de hoje
+      horario: "09:30",
       status: "Agendado",
-      medicoNome: "Dr. João Silva"
-    }
-  ];
-
-  const proximosAgendamentos: Agendamento[] = [
+      medicoNome: "Dr. Carlos Silva"
+    },
     {
       id: "2",
       rghcPaciente: "123456",
-      especialidade: "Fisioterapia",
-      data: "2025-05-25",
-      horario: "10:00",
+      especialidade: "Fonoaudiologia",
+      data: new Date().toISOString().split('T')[0], // Data de hoje
+      horario: "13:20",
       status: "Agendado",
-      medicoNome: "Dra. Maria Santos"
-    },
+      medicoNome: "Dra. Ana Santos"
+    }
+  ];
+
+  const agendamentosFuturos: Agendamento[] = [
     {
       id: "3",
       rghcPaciente: "123456",
-      especialidade: "Terapia Ocupacional",
-      data: "2025-05-28",
-      horario: "09:00",
-      status: "Agendado",
-      medicoNome: "Dr. Pedro Costa"
-    },
-    {
-      id: "4",
-      rghcPaciente: "123456",
       especialidade: "Nutrição",
-      data: "2025-05-30",
-      horario: "11:30",
+      data: "2025-05-26", // Data futura
+      horario: "15:00",
       status: "Agendado",
-      medicoNome: "Dra. Ana Oliveira"
+      medicoNome: "Dr. Paulo Costa"
     }
   ];
 
   return (
     <div className="p-6">
+      
       <ListaAgendamentos 
         agendamentos={agendamentosHoje} 
-        titulo="Consulta de hoje" 
+        titulo="Na semana" 
       />
       
       <ListaAgendamentos 
-        agendamentos={proximosAgendamentos} 
-        titulo="Próximas consultas" 
+        agendamentos={agendamentosFuturos} 
+        titulo="Próximos dias" 
       />
+
+      <div className="bg-white rounded-lg shadow-md p-6 text-center">
+        
+        <button className="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium cursor-pointer">
+          Agendar consulta
+        </button>
+      </div>
     </div>
   );
 }
