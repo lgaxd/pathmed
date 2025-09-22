@@ -5,8 +5,8 @@ import { ErrorBoundary } from "react-error-boundary";
 import { Loading } from "./components/loading";
 
 const Home = lazy(() =>
-  import("./pages/home").then((module) => ({ 
-    default: module.Home, 
+  import("./pages/home").then((module) => ({
+    default: module.Home,
   }))
 );
 
@@ -17,9 +17,9 @@ const NotFound = lazy(() =>
 );
 
 const Login = lazy(() =>
-  import("./pages/login").then((module) => ({ 
+  import("./pages/login").then((module) => ({
     default: module.Login,
-   }))
+  }))
 );
 
 const OnboardingConsulta = lazy(() =>
@@ -40,6 +40,12 @@ const Configuracoes = lazy(() =>
   }))
 );
 
+const AssistenteVirtual = lazy(() =>
+  import("./pages/assistente-virtual").then((module) => ({
+    default: module.AssistenteVirtual,
+  }))
+);
+
 function App() {
 
   return (
@@ -53,6 +59,7 @@ function App() {
             <Route path="/onboarding-consulta" element={<OnboardingConsulta />} />
             <Route path="/teleconsulta" element={<TeleConsultaEncaminhamento />} />
             <Route path="/configuracoes" element={<Configuracoes />} />
+            <Route path="/assistente-virtual" element={<AssistenteVirtual />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>
