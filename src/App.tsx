@@ -46,6 +46,30 @@ const AssistenteVirtual = lazy(() =>
   }))
 );
 
+const Desenvolvedores = lazy(() =>
+  import("./pages/desenvolvedores").then((module) => ({
+    default: module.Desenvolvedores,
+  }))
+);
+
+const Perfil = lazy(() =>
+  import("./pages/perfil").then((module) => ({
+    default: module.Perfil,
+  }))
+);
+
+const Lembretes = lazy(() =>
+  import("./pages/lembretes").then((module) => ({
+    default: module.Lembretes,
+  }))
+);
+
+const Consultas = lazy(() =>
+  import("./pages/consultas").then((module) => ({
+    default: module.Consultas,
+  }))
+);
+
 function App() {
 
   return (
@@ -60,6 +84,10 @@ function App() {
             <Route path="/teleconsulta" element={<TeleConsultaEncaminhamento />} />
             <Route path="/configuracoes" element={<Configuracoes />} />
             <Route path="/assistente-virtual" element={<AssistenteVirtual />} />
+            <Route path="/desenvolvedores" element={<Desenvolvedores />} />
+            <Route path="/perfil" element={<Perfil />} />
+            <Route path="/lembretes" element={<Lembretes />} />
+            <Route path="/consultas" element={<Consultas />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>

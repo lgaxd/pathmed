@@ -24,7 +24,7 @@ export function Configuracoes() {
     };
 
     return (
-        <div>
+        <>
             <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             <Overlay visible={sidebarOpen} onClick={() => setSidebarOpen(false)} />
             <Header onMenuClick={() => setSidebarOpen(true)} onLogout={handleLogout} />
@@ -51,10 +51,6 @@ export function Configuracoes() {
                         onClick={() => handleNavigation('/reportar-bug')}
                     />
                     <ListItem
-                        texto="Termos"
-                        onClick={() => handleNavigation('/termos')}
-                    />
-                    <ListItem
                         texto="Política de Privacidade"
                         onClick={() => handleNavigation('/privacidade')}
                     />
@@ -71,6 +67,6 @@ export function Configuracoes() {
                     />
                 </ConfigSection>
             </ConfigContainer>
-        </div>
+        </>
     );
 }
