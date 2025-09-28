@@ -1,12 +1,37 @@
-# React + Vite
+# PATHMED - SOLUÇÃO AUXILIAR DE TELEMEDICINA PARA O HC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um portal médico moderno para pacientes do Hospital das Clínicas, proporcionando uma experiência digital completa para gerenciamento de consultas, telemedicina e assistência virtual.
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O Pathmed é uma aplicação web desenvolvida para facilitar o acesso dos pacientes aos serviços de saúde, oferecendo:
 
-## Expanding the ESLint configuration
+-Agendamento e gerenciamento de consultas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-Teleconsulta integrada
+
+-Assistente virtual inteligente
+
+-Acompanhamento de lembretes médicos
+
+-Perfil do paciente
+
+## Tecnologias Utilizadas
+
+React - Biblioteca principal para construção da interface
+
+TypeScript - Tipagem estática para maior confiabilidade
+
+Tailwind CSS - Framework CSS para estilização utilitária
+
+React Router DOM - Roteamento client-side
+
+HTML5 & CSS3 - Estrutura e estilização base
+
+## Equipe
+
+Lucas Grillo Alcântara (RM 561413)
+
+Augusto Buguas Rodrigues (RM 563858)
+
+Pietro Abrahamian (RM 561469)
