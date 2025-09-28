@@ -26,7 +26,7 @@ export function OnboardingConsulta() {
   const passoAtualData = onboardingSteps[passoAtual - 1];
 
   return (
-    <div>
+    <>
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <Overlay visible={sidebarOpen} onClick={() => setSidebarOpen(false)} />
       <Header onMenuClick={() => setSidebarOpen(true)} onLogout={handleLogout} />
@@ -55,6 +55,6 @@ export function OnboardingConsulta() {
           onAvancar={avancarPasso}
         />
       </OnboardingContainer>
-    </div>
+    </>
   );
 }

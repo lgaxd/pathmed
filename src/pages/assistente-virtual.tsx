@@ -26,7 +26,7 @@ export function AssistenteVirtual() {
     const { mensagens, novaMensagem, setNovaMensagem, enviarMensagem } = useChat(mensagensIniciais);
 
     return (
-        <div>
+        <>
             <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             <Overlay visible={sidebarOpen} onClick={() => setSidebarOpen(false)} />
             <Header onMenuClick={() => setSidebarOpen(true)} onLogout={handleLogout} />
@@ -46,6 +46,6 @@ export function AssistenteVirtual() {
                     placeholder="Digite uma mensagem"
                 />
             </ChatContainer>
-        </div>
+        </>
     );
 }

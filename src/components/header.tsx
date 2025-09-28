@@ -1,5 +1,6 @@
 import { useState } from "react";
 import iconeUsuario from "../assets/imgs/utils/icone-usuario.png";
+import icone80anos from "../assets/imgs/logos/logo-80anos.png";
 
 interface HeaderProps {
     onMenuClick: () => void;
@@ -19,6 +20,16 @@ export function Header({ onMenuClick, onLogout }: HeaderProps) {
             >
                 ☰
             </button>
+
+            {/* Botão com imagem da logotipo, que encaminha à página Home usando navigate. */}
+            <div className="flex-grow text-center">
+                <img
+                    src={icone80anos}
+                    alt="Logotipo"
+                    className="h-8 mx-auto cursor-pointer"
+                    onClick={() => window.location.href = '/'}
+                />
+            </div>
 
             {/* Avatar / Dropdown */}
             <div className="relative">
