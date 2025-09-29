@@ -28,6 +28,10 @@ React Router DOM - Roteamento client-side
 
 HTML5 & CSS3 - Estrutura e estilização base
 
+## Como utilizar
+
+Execute o comando "npm run dev" na pasta do projeto e acesse a página informada no terminal.
+
 ## Equipe
 
 Lucas Grillo Alcântara (RM 561413)
@@ -35,3 +39,7 @@ Lucas Grillo Alcântara (RM 561413)
 Augusto Buguas Rodrigues (RM 563858)
 
 Pietro Abrahamian (RM 561469)
+
+## Demonstração em vídeo
+
+https://www.youtube.com/watch?v=IsVvpwQPZyg
