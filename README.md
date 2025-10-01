@@ -6,25 +6,25 @@ Um portal médico moderno para pacientes do Hospital das Clínicas, proporcionan
 
 O Pathmed é uma aplicação web desenvolvida para facilitar o acesso dos pacientes aos serviços de saúde, oferecendo:
 
--Agendamento e gerenciamento de consultas
+- Agendamento e gerenciamento de consultas
 
--Teleconsulta integrada
+- Teleconsulta integrada
 
--Assistente virtual inteligente
+- Assistente virtual inteligente
 
--Acompanhamento de lembretes médicos
+- Acompanhamento de lembretes médicos
 
--Perfil do paciente
+- Perfil do paciente
 
 ## Tecnologias Utilizadas
 
-React - Biblioteca principal para construção da interface
+- **React** - Biblioteca principal para construção da interface
 
-TypeScript - Tipagem estática para maior confiabilidade
+- **TypeScript** - Tipagem estática para maior confiabilidade
 
-Tailwind CSS - Framework CSS para estilização utilitária
+- **Tailwind CSS** - Framework CSS para estilização utilitária
 
-React Router DOM - Roteamento client-side
+- **React Router DOM** - Roteamento client-side
 
 HTML5 & CSS3 - Estrutura e estilização base
 
@@ -34,11 +34,11 @@ Execute o comando "npm run dev" na pasta do projeto e acesse a página informada
 
 ## Equipe
 
-Lucas Grillo Alcântara (RM 561413)
+- **Lucas Grillo Alcântara** (RM 561413)
 
-Augusto Buguas Rodrigues (RM 563858)
+- **Augusto Buguas Rodrigues** (RM 563858)
 
-Pietro Abrahamian (RM 561469)
+- **Pietro Abrahamian** (RM 561469)
 
 ## Demonstração em vídeo
 
