@@ -43,3 +43,7 @@ Execute o comando "npm run dev" na pasta do projeto e acesse a página informada
 ## Demonstração em vídeo
 
 https://www.youtube.com/watch?v=IsVvpwQPZyg
+
+## Link do Repositório do Projeto
+
+https://github.com/lgaxd/pathmed/
