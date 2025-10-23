@@ -26,7 +26,7 @@ O Pathmed é uma aplicação web desenvolvida para facilitar o acesso dos pacien
 
 - **React Router DOM** - Roteamento client-side
 
-HTML5 & CSS3 - Estrutura e estilização base
+- **HTML5 & CSS3** - Estrutura e estilização base
 
 ## Como utilizar
 
